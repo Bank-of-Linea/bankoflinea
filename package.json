@@ -1,0 +1,27 @@
+{
+  "name": "bank-of-linea",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deployBankOfLinea.ts --network",
+    "lint": "prettier --list-different '**/*.sol' '**/*.ts' '**/*.json' '**/*.md' && npm run solhint",
+    "lint:fix": "prettier --write '**/*.sol' '**/*.ts' '**/*.json' '**/*.md'",
+    "solhint": "solhint contracts/**/*.sol -c .solhint.json",
+    "test": "npx hardhat test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.2.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.22.18",
+    "hardhat-contract-sizer": "^2.10.0",
+    "prettier": "^3.5.1",
+    "prettier-plugin-solidity": "^1.4.2",
+    "solhint": "^5.0.5"
+  }
+}
